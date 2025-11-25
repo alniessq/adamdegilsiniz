@@ -1,1 +1,189 @@
-bos
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bilimsel Karakter Analizi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, #111827, #020617);
+      color: #f9fafb;
+      padding: 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 24px;
+      padding: 24px 22px 26px;
+      box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(148, 163, 184, 0.2);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.15);
+      color: #67e8f9;
+      margin-bottom: 14px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #9ca3af;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+
+    .person-card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 20px;
+      padding: 16px 14px 18px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    }
+
+    .avatar-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 3px solid rgba(248, 250, 252, 0.9);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .prank-text {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .prank-text span {
+      background: linear-gradient(90deg, #f97316, #ef4444, #e11d48);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .footer {
+      font-size: 11px;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 18px 16px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      TÜBİTAK Onaylı(!) Otomatik Karakter Analizi Raporu
+    </div>
+
+    <h1>Sonuçlar Açıklandı</h1>
+    <p class="subtitle">
+      Yapay zekâ destekli ileri seviye analizler sonucunda aşağıdaki bilimsel(!) bulgulara ulaşılmıştır:
+    </p>
+
+    <div class="grid">
+      <div class="person-card">
+        <div class="avatar-wrapper">
+          <div class="avatar">
+            <img src="deno.jpg" alt="Deno">
+          </div>
+        </div>
+        <div class="name">Deno</div>
+        <div class="prank-text"><span>ADAM DEĞİLSİNİZ</span> 😂</div>
+        <p class="note">
+          Sistem, Deno’yu detaylı incelemiş ve sonuçlar maalesef bunu göstermiştir.
+        </p>
+      </div>
+
+      <div class="person-card">
+        <div class="avatar-wrapper">
+          <div class="avatar">
+            <img src="utku.jpg" alt="Utku">
+          </div>
+        </div>
+        <div class="name">Utku</div>
+        <div class="prank-text"><span>ADAM DEĞİLSİNİZ</span> 😂</div>
+        <p class="note">
+          Gerekli tüm testlerden sonra Utku için de aynı sonuca ulaşılmıştır.
+        </p>
+      </div>
+    </div>
+
+    <p class="footer">
+      Bu sayfa tamamen şaka amaçlıdır. Ciddiye alıyorsan test başarılı olmuştur. 🤝
+    </p>
+  </div>
+</body>
+</html>
